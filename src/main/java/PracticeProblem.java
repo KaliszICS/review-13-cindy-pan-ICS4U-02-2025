@@ -4,15 +4,19 @@ public class PracticeProblem {
 
 
 	public static void swap(ArrayList<String> list , int one, int two){
-		list.set((one), list.get(two));
-		list.set(two, list.get(one));
+		String value = list.get(two);
+		String valueReplace = list.get(one);
+		list.set((one), value);
+		list.set(two, valueReplace);
 	}	
 
 	public static ArrayList<Double> createArrayList(double[] list){
 		ArrayList<Double> arrL = new ArrayList<Double>();
-		for (int length = 0; length< list.length; length++){
+		for (int length = 0; length < list.length; length++){
+			arrL.add(0.0);
 			arrL.set(length, list[length]);
 		}
+
 		return arrL;
 	}
 
@@ -27,7 +31,9 @@ public class PracticeProblem {
 		return map;
 	}
 	
-	public static void increaseAge(HashMap<String, Integer> map, ) 
+	public static void increaseAge(HashMap<String, Integer> map, String name){
+		map.put(name, (map.get(name)+1));
+	} 
 
 
 }
